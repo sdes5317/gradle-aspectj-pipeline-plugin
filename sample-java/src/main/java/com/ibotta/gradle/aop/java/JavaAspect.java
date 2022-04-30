@@ -21,7 +21,7 @@ public class JavaAspect {
 //        messageListener.onMessage("Java AOP after hook triggered.", CallerType.AFTER_HOOK);
 //    }
     @Around("execution(* demonstrateJavaAOP(..))")
-    public void injectSpanTest(ProceedingJoinPoint joinPoint) throws Throwable {
+    public void injectTest(ProceedingJoinPoint joinPoint) throws Throwable {
         MessageListener messageListener = (MessageListener) joinPoint.getArgs()[0];
         messageListener.onMessage("Java AOP before hook triggered.", CallerType.BEFORE_HOOK);
 
